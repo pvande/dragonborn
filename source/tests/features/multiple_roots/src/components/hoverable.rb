@@ -1,0 +1,2 @@
+module Hoverable
+end

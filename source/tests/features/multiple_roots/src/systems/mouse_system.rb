@@ -1,0 +1,2 @@
+class MouseSystem
+end

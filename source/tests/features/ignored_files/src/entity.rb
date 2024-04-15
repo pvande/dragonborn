@@ -1,0 +1,1 @@
+Entity = Struct.new(:id)

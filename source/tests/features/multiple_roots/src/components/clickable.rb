@@ -1,0 +1,2 @@
+module Clickable
+end
