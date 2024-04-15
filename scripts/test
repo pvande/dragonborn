@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+for test in $(find source -name test.rb | cut -d '/' -f2-); do
+  ./dragonruby source --test "${test}"
+done
+
+echo "All tests passed!"
