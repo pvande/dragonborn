@@ -10,7 +10,7 @@ cp dragonborn.rb tmp/game/lib
 touch tmp/game/app/main.rb
 
 for test in $(find tests -name test.rb); do
-  ./dragonruby-standard-5.22 tmp/game --test "${test}"
+  ./dragonruby tmp/game --test "${test}"
 done
 
 echo "All tests passed!"

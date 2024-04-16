@@ -3,13 +3,6 @@ Tests:
 - More errors?
 
 Documentation:
-- README
-  - Rationale
-  - Usage
-    - Baseline
-    - Convention
-    - Configuration
-  - Caveats
 - Source
   - Approach
   - API

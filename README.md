@@ -7,6 +7,29 @@ initialization.
 
 ## Rationale
 
+Managing `require` statements isn't fun.
+
+Building a game is complicated, and involves a lot of decisions that around
+logic, aesthetics, timing, narrative, and many other factors. DragonRuby GTK
+provides a fantastic platform for quickly building a prototype, and gradually
+evolving it into a publication-ready game — giving you creative freedom for both
+your game and your code structure. As your game spreads out across multiple
+files, however, it becomes necessary for *this* file to use things from this
+*other* file, which affects the order that you have to `require` those files in…
+
+It doesn't take many repetitions before remembering that order becomes a burden.
+
+If you're familiar with Ruby from using Rails, you're probably used to having
+the platform figure all that out for you. If you create a file named
+`person.rb` and that file contains a class named `Person`, you don't worry about
+`require` at all — you just _use `Person`_ wherever you need it. Combined with
+something like hotloading (where your code changes are automatically applied),
+you can enter a powerful flow state where you stop editing *files* and start
+editing *the application directly*.
+
+Dragonborn exists to bring that same workflow to DragonRuby, making it just that
+*little* bit easier to **finish your game**.
+
 ## Usage
 
 Start by saving [dragonborn.rb] into your game's source tree. The entirety
@@ -35,8 +58,27 @@ Dragonborn.configure do
 end
 ```
 
-By following the Dragonborn convention, Dragonborn will work out an appropriate
-load order and automatically require all of the files you ask it to manage.
+This loads Dragonborn into your application, and directs it to manage and load
+all Ruby code within your `app` directory. By following the Dragonborn naming
+conventions, Dragonborn automatically works out an appropriate load order and
+requires all of the files in its purview.
+
+---
+
+Many projects also have a "junk drawer" — one (or more!) directories of files
+that contain the variety of helper functions, library patches, and other
+assorted code that your application relies on. For cases like these, Dragonborn
+also includes a helper to just require each file.
+
+``` ruby
+# Requires all files in the "patches" directory, but not subdirectories.
+Dragonborn.require_dir("patches")
+```
+
+These files are not considered "managed" by Dragonborn; it simply iterates
+through the files in that directory and `require`s them. This makes it well
+suited for requiring files in bulk that may or may not follow convention, and
+which don't have load order considerations.
 
 ### Convention
 
@@ -94,9 +136,10 @@ To help resolve this, Dragonborn uses an *inflection map* to override how it
 handles specific parts of a name (`html` => `HTML`) or entire names
 (`cutscene_keyframes` => `CUTSCENE_KEYFRAMES`).
 
-<!-- resume here -->
-
 ### Configuration
+
+Inside the block passed to `Dragonborn.configure`, you tell Dragonborn how your
+project is structured by calling the following configuration functions.
 
 #### root [dir]
 The `root` configuration option indicates that this is a directory Dragonborn
@@ -149,6 +192,65 @@ Dragonborn.configure do
 end
 # … expects to load `UI::Button`
 ```
+
+### Caveats
+
+* Dragonborn has a constant lookup algorithm that is *slightly* different than
+  what's described by the Ruby standard. Specifically, Ruby's constant lookup
+  searches the ancestors of *each open namespace*. This is reasonably intuitive
+  as you're writing code, but makes metaprogramming life more difficult. (For an
+  example, see [caveats/examples/constant_lookup.rb].)
+
+  Dragonborn works by exploiting the `const_missing` functionality in Ruby to
+  load your code as it's needed. In doing so, any information about which
+  namespaces were open at the location that the const was looked up is lost.
+  Since that information is required to perfectly replicate Ruby's native
+  constant lookup, **Dragonborn will find different constants in some cases**.
+
+  To minimize the odds of running afoul of this behavior, avoid defining your
+  classes and modules with the "compact" (`::`-separated) syntax, and be mindful
+  about constant lookups in dynamically defined methods.
+
+  ``` ruby
+    # AVOID:
+    class Foo::Bar::Baz
+      # Constants looked up here will resolve incorrectly in Dragonborn!
+    end
+
+    # INSTEAD:
+    class Foo
+      class Bar
+        class Baz
+          # This is more verbose and more indentation, but Dragonborn's behavior
+          # will match Ruby's!
+        end
+      end
+    end
+
+    # --- #
+
+    # AVOID:
+    Foo.define_method(:bar) { CONST }
+
+    # INSTEAD:
+    class Foo
+      define_method(:bar) { CONST }
+    end
+
+    # --- #
+
+    # AVOID:
+    def Foo.bar
+      CONST
+    end
+
+    # INSTEAD:
+    class Foo
+      def self.bar
+        CONST
+      end
+    end
+  ```
 
 [dragonborn.rb]: https://raw.githubusercontent.com/pvande/dragonborn/main/dragonborn.rb
 [download_stb]: https://docs.dragonruby.org/#/api/runtime?id=download_stb_rb_raw
