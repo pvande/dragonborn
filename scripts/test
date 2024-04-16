@@ -2,8 +2,15 @@
 
 set -e
 
-for test in $(find source -name test.rb | cut -d '/' -f2-); do
-  ./dragonruby source --test "${test}"
+rm -rf tmp/game
+mkdir -p tmp/game/{app,lib}
+cp -r tests tmp/game/
+cp -r support tmp/game/
+cp dragonborn.rb tmp/game/lib
+touch tmp/game/app/main.rb
+
+for test in $(find tests -name test.rb); do
+  ./dragonruby-standard-5.22 tmp/game --test "${test}"
 done
 
 echo "All tests passed!"
