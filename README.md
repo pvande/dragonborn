@@ -86,13 +86,13 @@ For Dragonborn to work with your project, simply name files and directories
 after the classes, modules, and constants they define:
 
 ``` text
-  # Dragonborn.configure { root "app" }
+# Dragonborn.configure { root "app" }
 
-  app/entity.rb                    -> Entity
-  app/entities/player.rb           -> Entities::Player
-  app/entities/player/sprite.rb    -> Entities::Player::Sprite
-  app/services/movement_service.rb -> Services::MovementService
-  app/scenes/settings/audio.rb     -> Scenes::Settings::Audio
+app/entity.rb                    -> Entity
+app/entities/player.rb           -> Entities::Player
+app/entities/player/sprite.rb    -> Entities::Player::Sprite
+app/services/movement_service.rb -> Services::MovementService
+app/scenes/settings/audio.rb     -> Scenes::Settings::Audio
 ```
 
 (In general, this follows the same naming conventions as Rails, if you're
@@ -212,44 +212,44 @@ end
   about constant lookups in dynamically defined methods.
 
   ``` ruby
-    # AVOID:
-    class Foo::Bar::Baz
-      # Constants looked up here will resolve incorrectly in Dragonborn!
-    end
+  # AVOID:
+  class Foo::Bar::Baz
+    # Constants looked up here will resolve incorrectly in Dragonborn!
+  end
 
-    # INSTEAD:
-    class Foo
-      class Bar
-        class Baz
-          # This is more verbose and more indentation, but Dragonborn's behavior
-          # will match Ruby's!
-        end
+  # INSTEAD:
+  class Foo
+    class Bar
+      class Baz
+        # This is more verbose and more indentation, but Dragonborn's behavior
+        # will match Ruby's!
       end
     end
+  end
 
-    # --- #
+  # --- #
 
-    # AVOID:
-    Foo.define_method(:bar) { CONST }
+  # AVOID:
+  Foo.define_method(:bar) { CONST }
 
-    # INSTEAD:
-    class Foo
-      define_method(:bar) { CONST }
-    end
+  # INSTEAD:
+  class Foo
+    define_method(:bar) { CONST }
+  end
 
-    # --- #
+  # --- #
 
-    # AVOID:
-    def Foo.bar
+  # AVOID:
+  def Foo.bar
+    CONST
+  end
+
+  # INSTEAD:
+  class Foo
+    def self.bar
       CONST
     end
-
-    # INSTEAD:
-    class Foo
-      def self.bar
-        CONST
-      end
-    end
+  end
   ```
 
 [dragonborn.rb]: https://raw.githubusercontent.com/pvande/dragonborn/main/dragonborn.rb
