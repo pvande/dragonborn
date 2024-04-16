@@ -1,6 +1,6 @@
-# NOTE: Work in Progress!
-
 # Dragonborn
+
+> NOTE: Work in Progress!
 
 Dragonborn is a drop-in library to sort out your DragonRuby game's
 initialization.
@@ -61,7 +61,6 @@ Dragonborn.configure { root "app/components" }
 Dragonborn.configure { root "app/components/player" }
 # … expects to load `Movement`
 ```
-
 
 #### ignore [filepath]
 The `ignore` configuration option instructs Dragonborn to skip autoloading the

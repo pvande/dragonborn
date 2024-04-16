@@ -274,7 +274,7 @@ module Dragonborn
           next if loadable.empty? && !virtual.empty?
 
           cpath = cname_stats.first[:cpath]
-          paths = load_paths.map { |path| "  * #{path}"}.join("\n")
+          paths = load_paths.map { |path| "  * #{path}" }.join("\n")
           @errors << "Multiple files mapped to #{cpath}\n#{paths}"
           nil
         end
