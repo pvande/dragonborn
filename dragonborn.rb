@@ -1,8 +1,17 @@
-class << Kernel
-  # @NOTE The existence of `Kernel.const_defined?` is a holdover from mruby's
-  #       early days; it is neither necessary nor correct, and was removed in
-  #       DragonRuby 5.25.
-  remove_method :const_defined? if method_defined? :const_defined?
+# @NOTE The existence of `Kernel.const_defined?` is a holdover from mruby's
+#       early days; it is neither necessary nor correct, and was removed in
+#       DragonRuby 5.25.
+# @NOTE `remove_method` doesn't properly update the output of
+#       `method_defined?`, `methods`, or `instance_methods`, making it
+#       difficult to check whether or not the method exists after hotloading.
+#       As a workaround, we have to track this patch independently…
+unless $dragonborn_already_removed_singleton_const_defined
+  class << Kernel
+    if method_defined? :const_defined?
+      remove_method :const_defined?
+      $dragonborn_already_removed_singleton_const_defined = true
+    end
+  end
 end
 
 module Dragonborn
