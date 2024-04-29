@@ -3,7 +3,7 @@
 > NOTE: Work in Progress!
 
 Dragonborn is a drop-in library to sort out your DragonRuby game's
-initialization.
+initialization. Works with DragonRuby 5.25+.
 
 ## Rationale
 
