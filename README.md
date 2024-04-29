@@ -1,4 +1,4 @@
-# Dragonborn
+# Dragonborn [![Tests](https://github.com/pvande/dragonborn/actions/workflows/regression-tests.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/regression-tests.yml)
 
 > NOTE: Work in Progress!
 
