@@ -1,0 +1,39 @@
+name: "Tests"
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        version:
+          - '5.25'
+        tier:
+          - standard
+          - pro
+        runner:
+          - windows-2022
+          - macos-12
+          - ubuntu-22.04
+      fail-fast: false
+    runs-on: ${{ matrix.runner }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: kfischer-okarin/download-dragonruby@v1
+        with:
+          version: ${{ matrix.version }}
+          license_tier: ${{ matrix.tier }}
+      - name: Run tests
+        env:
+          SDL_VIDEODRIVER: dummy
+          SDL_AUDIODRIVER: dummy
+        run: scripts/test
