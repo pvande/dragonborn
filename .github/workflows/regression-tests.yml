@@ -15,6 +15,9 @@ jobs:
         version:
           - '5.25'
           - '5.27'
+          - '5.28'
+          - '5.29'
+          - '5.30'
         tier:
           - standard
           - pro
