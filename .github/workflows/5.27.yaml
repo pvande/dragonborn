@@ -1,4 +1,4 @@
-name: "DragonRuby 5.27"
+name: "5.27"
 on:
   pull_request:
     paths-ignore:
@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  run-tests:
+  tests:
     uses: ./.github/workflows/regression-tests.yml
     with:
       version: '5.27'

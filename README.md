@@ -7,12 +7,12 @@ initialization. Works with DragonRuby 5.25+.
 
 |Version|
 |-------|
-|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.25.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.25.yml)|
-|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.26.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.26.yml)|
-|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.27.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.27.yml)|
-|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.28.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.28.yml)|
-|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.29.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.29.yml)|
-|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.30.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.30.yml)|
+|[![DragonRuby 5.25](https://github.com/pvande/dragonborn/actions/workflows/5.25.yaml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.25.yaml)|
+|[![DragonRuby 5.26](https://github.com/pvande/dragonborn/actions/workflows/5.26.yaml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.26.yaml)|
+|[![DragonRuby 5.27](https://github.com/pvande/dragonborn/actions/workflows/5.27.yaml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.27.yaml)|
+|[![DragonRuby 5.28](https://github.com/pvande/dragonborn/actions/workflows/5.28.yaml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.28.yaml)|
+|[![DragonRuby 5.29](https://github.com/pvande/dragonborn/actions/workflows/5.29.yaml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.29.yaml)|
+|[![DragonRuby 5.30](https://github.com/pvande/dragonborn/actions/workflows/5.30.yaml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.30.yaml)|
 
 ## Rationale
 
