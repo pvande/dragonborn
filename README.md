@@ -7,12 +7,12 @@ initialization. Works with DragonRuby 5.25+.
 
 |Version|
 |-------|
-|[![DragonRuby 5.25](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.25.yaml?label=5.25)](https://github.com/pvande/dragonborn/actions/workflows/5.25.yaml)|
-|[![DragonRuby 5.26](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.26.yaml?label=5.26)](https://github.com/pvande/dragonborn/actions/workflows/5.26.yaml)|
-|[![DragonRuby 5.27](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.27.yaml?label=5.27)](https://github.com/pvande/dragonborn/actions/workflows/5.27.yaml)|
-|[![DragonRuby 5.28](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.28.yaml?label=5.28)](https://github.com/pvande/dragonborn/actions/workflows/5.28.yaml)|
-|[![DragonRuby 5.29](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.29.yaml?label=5.29)](https://github.com/pvande/dragonborn/actions/workflows/5.29.yaml)|
-|[![DragonRuby 5.30](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.30.yaml?label=5.30)](https://github.com/pvande/dragonborn/actions/workflows/5.30.yaml)|
+|[![DragonRuby 5.25](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.25.yaml?style=flat&label=5.25)](https://github.com/pvande/dragonborn/actions/workflows/5.25.yaml)|
+|[![DragonRuby 5.26](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.26.yaml?style=flat&label=5.26)](https://github.com/pvande/dragonborn/actions/workflows/5.26.yaml)|
+|[![DragonRuby 5.27](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.27.yaml?style=flat&label=5.27)](https://github.com/pvande/dragonborn/actions/workflows/5.27.yaml)|
+|[![DragonRuby 5.28](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.28.yaml?style=flat&label=5.28)](https://github.com/pvande/dragonborn/actions/workflows/5.28.yaml)|
+|[![DragonRuby 5.29](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.29.yaml?style=flat&label=5.29)](https://github.com/pvande/dragonborn/actions/workflows/5.29.yaml)|
+|[![DragonRuby 5.30](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.30.yaml?style=flat&label=5.30)](https://github.com/pvande/dragonborn/actions/workflows/5.30.yaml)|
 
 ## Rationale
 
