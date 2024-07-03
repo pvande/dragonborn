@@ -1,0 +1,14 @@
+name: "DragonRuby 5.28"
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    uses: ./.github/workflows/regression-tests.yml
+    with:
+      version: '5.28'

@@ -1,30 +1,23 @@
 name: "Tests"
 
 on:
-  pull_request:
-    paths-ignore:
-      - '**.md'
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
 
 jobs:
   test:
     strategy:
       matrix:
-        version:
-          - '5.25'
-          - '5.27'
-          - '5.28'
-          - '5.29'
-          - '5.30'
-        tier:
-          - standard
-          - pro
         runner:
           - windows-2022
           - macos-12
           - ubuntu-22.04
+        tier:
+          - standard
+          - pro
       fail-fast: false
     runs-on: ${{ matrix.runner }}
     defaults:
@@ -34,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: kfischer-okarin/download-dragonruby@v1
         with:
-          version: ${{ matrix.version }}
+          version: ${{ inputs.version }}
           license_tier: ${{ matrix.tier }}
       - name: Run tests
         env:

@@ -1,9 +1,18 @@
-# Dragonborn [![Tests](https://github.com/pvande/dragonborn/actions/workflows/regression-tests.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/regression-tests.yml)
+# Dragonborn
 
 > NOTE: Work in Progress!
 
 Dragonborn is a drop-in library to sort out your DragonRuby game's
 initialization. Works with DragonRuby 5.25+.
+
+|Version|
+|-------|
+|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.25.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.25.yml)|
+|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.26.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.26.yml)|
+|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.27.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.27.yml)|
+|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.28.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.28.yml)|
+|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.29.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.29.yml)|
+|[![Tests](https://github.com/pvande/dragonborn/actions/workflows/5.30.yml/badge.svg)](https://github.com/pvande/dragonborn/actions/workflows/5.30.yml)|
 
 ## Rationale
 
