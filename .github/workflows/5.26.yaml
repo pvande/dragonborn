@@ -9,6 +9,7 @@ on:
 
 jobs:
   tests:
+    if: ${{ false && '5.26 was short-lived and is not available for testing' }}
     uses: ./.github/workflows/regression-tests.yml
     with:
       version: '5.26'
