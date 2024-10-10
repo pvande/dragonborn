@@ -13,6 +13,14 @@ initialization. Works with DragonRuby 5.25+.
 |[![DragonRuby 5.28](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.28.yaml?style=flat&label=5.28)](https://github.com/pvande/dragonborn/actions/workflows/5.28.yaml)|
 |[![DragonRuby 5.29](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.29.yaml?style=flat&label=5.29)](https://github.com/pvande/dragonborn/actions/workflows/5.29.yaml)|
 |[![DragonRuby 5.30](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.30.yaml?style=flat&label=5.30)](https://github.com/pvande/dragonborn/actions/workflows/5.30.yaml)|
+|[![DragonRuby 5.32](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.32.yaml?style=flat&label=5.32)](https://github.com/pvande/dragonborn/actions/workflows/5.32.yaml)|
+|[![DragonRuby 5.33](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.33.yaml?style=flat&label=5.33)](https://github.com/pvande/dragonborn/actions/workflows/5.33.yaml)|
+|[![DragonRuby 5.34](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.34.yaml?style=flat&label=5.34)](https://github.com/pvande/dragonborn/actions/workflows/5.34.yaml)|
+|[![DragonRuby 5.35](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.35.yaml?style=flat&label=5.35)](https://github.com/pvande/dragonborn/actions/workflows/5.35.yaml)|
+|[![DragonRuby 5.36](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/5.36.yaml?style=flat&label=5.36)](https://github.com/pvande/dragonborn/actions/workflows/5.36.yaml)|
+|[![DragonRuby 6.0](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/6.0.yaml?style=flat&label=6.0)](https://github.com/pvande/dragonborn/actions/workflows/6.0.yaml)|
+|[![DragonRuby 6.1](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/6.1.yaml?style=flat&label=6.1)](https://github.com/pvande/dragonborn/actions/workflows/6.1.yaml)|
+|[![DragonRuby 6.3](https://img.shields.io/github/actions/workflow/status/pvande/dragonborn/6.3.yaml?style=flat&label=6.3)](https://github.com/pvande/dragonborn/actions/workflows/6.3.yaml)|
 
 ## Rationale
 

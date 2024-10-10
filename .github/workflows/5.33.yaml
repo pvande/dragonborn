@@ -1,0 +1,14 @@
+name: "5.33"
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    uses: ./.github/workflows/regression-tests.yml
+    with:
+      version: '5.33'
